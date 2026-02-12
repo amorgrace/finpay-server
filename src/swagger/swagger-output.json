@@ -1,0 +1,61 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/google": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "description": "Log in a user using Google OAuth",
+        "parameters": [
+          {
+            "name": "idToken",
+            "in": "body",
+            "description": "Google OAuth ID Token",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idToken": {
+                  "type": "string",
+                  "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI3..."
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  }
+}
