@@ -3,3 +3,19 @@ node_modules
 .env
 
 /generated/prisma
+
+
+# Build output
+dist/
+build/
+
+
+# VSCode settings
+.vscode/
+
+# Prisma generated / local files
+prisma/migrations/
+prisma/dev.db
+
+# Logs
+*.log
