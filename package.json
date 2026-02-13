@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "npm run swagger && tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "swagger": "tsx src/swagger/swagger.ts"
-  },
+"scripts": {
+  "dev": "npm run swagger && tsx watch src/server.ts",
+  "build": "prisma generate && tsc",
+  "start": "node dist/server.js",
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "swagger": "tsx src/swagger/swagger.ts"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
