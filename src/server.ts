@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
-import { prisma } from "./lib/prisma";
-import authRoutes from "./modules/authentication/auth.routes";
+import { prisma } from "./lib/prisma.js";
+import authRoutes from "./modules/authentication/auth.routes.js";
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './swagger/swagger-output.json'
+import swaggerDocument from './swagger/swagger-output.json' with { type: 'json' };
 import cors from "cors"
 
 const app = express();

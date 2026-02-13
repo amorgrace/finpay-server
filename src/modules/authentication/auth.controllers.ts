@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { googleAuthSchema } from "./auth.schema";
-import { verifyGoogleToken, findOrCreateGoogleUser, generateJWT } from "./auth.services";
+import { googleAuthSchema } from "./auth.schema.js";
+import { verifyGoogleToken, findOrCreateGoogleUser, generateJWT } from "./auth.services.js";
 
 export const googleLogin = async (req: Request, res: Response) => {
   try {

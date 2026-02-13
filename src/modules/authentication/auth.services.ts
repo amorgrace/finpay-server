@@ -1,7 +1,7 @@
 import { OAuth2Client } from "google-auth-library";
 import jwt from "jsonwebtoken";
-import { prisma } from "../../lib/prisma";
-import { GoogleUserPayload } from "./auth.types";
+import { prisma } from "../../lib/prisma.js";
+import { GoogleUserPayload } from "./auth.types.js";
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
